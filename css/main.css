@@ -97,6 +97,7 @@ body {
 
 .slider {
     margin-top: 15px;
+    position: relative;
 }
 
 .slide {
@@ -111,7 +112,7 @@ body {
 
 .slide-content {
     position: relative;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .slide-title {
@@ -159,6 +160,33 @@ body {
     background-image: url(../img/summer.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.slide-fall {
+    background-image: url(../img/fall.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-vitamins {
+    background-image: url(../img/vitamins.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider-buttons {
+    position: absolute;
+    right: 46px;
+    bottom: 40px;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+}
+
+.slider-button {
+    cursor: pointer;
 }
 
 .slide::before {
@@ -523,4 +551,116 @@ body {
 .social-link {
     text-decoration: none;
     margin-left: 20px;
+}
+
+@media (max-width: 1260px) {
+    .container {
+        max-width: 960px;
+    }
+    .search-form {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .tabs-content {
+        flex-wrap: wrap;
+    }
+    .tabs-card {
+        flex: 50%;
+        max-width: calc(50% - 35px);
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+    .slide {
+        padding: 70px;
+    }
+    .delivery-card {
+        width: calc(50% - 30px);
+        margin-bottom: 10px;
+    }
+    .footer-logo {
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 560px;
+    }
+    .header {
+        flex-wrap: wrap;
+    }
+    .search-form {
+        order: 5;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .promo {
+        flex-wrap: wrap;
+    }
+    .card {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 90%;
+    }
+    .tabs-card {
+        max-width: 100%;
+        flex: 100%;
+        margin: 10px auto;
+    }
+    .delivery-card {
+        width: 100%;
+    }
+    .tabs {
+        justify-content: space-between;
+    }
+    .tabs-link {
+        margin-right: 0px;
+    }
+    .advantage-cards {
+        flex-wrap: wrap;
+    }
+    .advantage-card {
+        margin: 10px auto;
+    }
+    .advantage-card:last-child {
+        margin: auto;
+    }
+    .footer-wrap {
+        flex-direction: column;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .footer-logo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .social-links {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .footer-link:last-child {
+        margin-right: 0;
+    }
+    .slide-title {
+        font-size: 24px;
+        line-height: 1.1;
+    }
+    .slide-text {
+        font-size: 14px;
+        line-height: 1.1;
+    }
+    .button {
+        font-size: 14px;
+        line-height: 1.1;
+    }
 }
